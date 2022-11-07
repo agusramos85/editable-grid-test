@@ -1,0 +1,22 @@
+<div class="editable-grid-component">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>user1Value</th>
+      <th>F1Value</th>
+      <th>user2Value</th>
+      <th>F2Value</th>
+      <th>totalValue</th>
+    </tr>
+    <tr *ngFor="let data of tableData">
+      <td>{{ data.id }}</td>
+      <td>{{ data.name }}</td>
+      <td><input (blur)="updateV1(data)" [(ngModel)]="data.user1Value" /></td>
+      <td>{{ data.f1Value }}</td>
+      <td><input (blur)="updateV2(data)" [(ngModel)]="data.user2Value" /></td>
+      <td>{{ data.f2Value }}</td>
+      <td>{{ data.totalValue }}</td>
+    <tr>
+  </table>
+</div>
